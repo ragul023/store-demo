@@ -57,13 +57,7 @@ JWT_SECRET=use-a-long-random-secret-at-least-32-characters
 JWT_EXPIRES_IN=7d
 ```
 
-Initialize the database and demo product catalogue. Run from the project root:
-
-```bash
-npm run db:init --prefix server
-```
-
-The script reads `server/sql/schema.sql`, creates the relational tables, then seeds categories, demo products, sizes and collections. It is safe to rerun for the seeded rows.
+The API automatically initializes the database schema and demo catalogue from `server/sql/schema.sql` when it starts. Make sure PostgreSQL is running and `DATABASE_URL` is configured before starting the API. Initialization is idempotent for the included schema and seed rows.
 
 ## 3. Configure the frontend
 
