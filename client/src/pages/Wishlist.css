@@ -1,0 +1,1 @@
+.wishlist-page{padding-top:65px}.wishlist-heading{margin-bottom:40px}.wishlist-heading h1{font:500 clamp(48px,6vw,70px)/1 var(--serif);letter-spacing:-.06em;margin:15px 0}.wishlist-heading h1 em{color:var(--accent)}.wishlist-heading p{font-size:12px;color:var(--muted)}.wishlist-page .empty-state{padding:55px 0}@media(max-width:600px){.wishlist-page{padding-top:45px}}
