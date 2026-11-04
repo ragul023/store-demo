@@ -18,11 +18,11 @@ jobs:
     env:
       NODE_ENV: production
       PORT: 4000
-      CLIENT_URL: https://store.example.invalid
-      DATABASE_URL: postgresql://ci:ci@example.invalid:5432/aura_store
+      CLIENT_URL: https://aura-store-tawny-three.vercel.app/
+      DATABASE_URL: postgresql://neondb_owner:npg_kxmt4FQGB2Zq@ep-damp-mud-b3m4hlxs-pooler.c-4.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
       DATABASE_SSL: 'true'
       JWT_SECRET: ci-only-placeholder-secret-not-used-for-deployment
-      VITE_API_URL: https://api.example.invalid
+      VITE_API_URL: https://store-demo-cvd1.onrender.com
     steps:
       - name: Check out source
         uses: actions/checkout@v4
