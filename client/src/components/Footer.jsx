@@ -12,6 +12,7 @@ export default function Footer() {
             Thoughtful pieces for the many versions of you. Made for real life,
             and all the lovely bits in between.
           </p>
+          <p className="footer-owner-note">Independently owned and developed by Ragul.</p>
           <div className="social-links">
             <a href="https://instagram.com" target="_blank" rel="noreferrer">
               Instagram ↗
@@ -66,13 +67,13 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© 2026 AURA. MADE FOR EVERYDAY.</span>
+        <span>© {new Date().getFullYear()} Ragul. All rights reserved.</span>
         <div>
           <a href="#top">Privacy</a>
           <a href="#top">Terms</a>
           <span>India · ₹ INR</span>
         </div>
-        <span>DESIGNED WITH INTENTION ✳</span>
+        <span className="footer-credit">AURA IS AN INDEPENDENT STORE BY RAGUL ✳</span>
       </div>
     </footer>
   );

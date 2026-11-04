@@ -1,5 +1,7 @@
 # Aura — Fashion Store Demo
 
+Aura is an independent store project owned and developed by Ragul.
+
 A premium, light-theme fashion storefront for Men, Women and Kids. Built with React + Vite, Express, PostgreSQL and native CSS (one stylesheet per component/page). The storefront includes a polished demo shopping journey and an API/database foundation for the next integration step.
 
 ## What's included

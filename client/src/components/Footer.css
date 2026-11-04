@@ -30,6 +30,11 @@
   max-width: 260px;
   margin: 20px 0;
 }
+.footer-brand .footer-owner-note {
+  color: #71665a;
+  font-size: 10px;
+  margin: 13px 0 20px;
+}
 .social-links {
   display: flex;
   gap: 18px;
@@ -119,8 +124,8 @@
     flex-wrap: wrap;
     padding: 18px 0;
   }
-  .footer-bottom > span:last-child {
-    display: none;
+  .footer-credit {
+    width: 100%;
   }
 }
 @media (max-width: 520px) {
@@ -146,6 +151,9 @@
     width: 100%;
   }
   .footer-bottom > span:first-child {
+    font-size: 7px;
+  }
+  .footer-credit {
     font-size: 7px;
   }
 }
