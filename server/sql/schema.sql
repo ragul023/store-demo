@@ -1,4 +1,4 @@
--- Aurelia fashion store schema (PostgreSQL 14+)
+-- Aura fashion store schema (PostgreSQL 14+)
 CREATE EXTENSION IF NOT EXISTS pgcrypto;
 
 CREATE TABLE IF NOT EXISTS users (

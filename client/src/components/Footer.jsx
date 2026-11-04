@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="footer-main">
         <div className="footer-brand">
           <Link to="/" className="brand-name">
-            aurelia<span>.</span>
+            aura<span>.</span>
           </Link>
           <p>
             Thoughtful pieces for the many versions of you. Made for real life,
@@ -33,9 +33,9 @@ export default function Footer() {
           <span className="eyebrow">WE'RE HERE</span>
           <Link to="/account">My account</Link>
           <Link to="/orders">Track an order</Link>
-          <a href="mailto:hello@aurelia.store">Contact us</a>
-          <a href="mailto:hello@aurelia.store">Shipping & returns</a>
-          <a href="mailto:hello@aurelia.store">FAQs</a>
+          <a href="mailto:hello@aura.store">Contact us</a>
+          <a href="mailto:hello@aura.store">Shipping & returns</a>
+          <a href="mailto:hello@aura.store">FAQs</a>
         </div>
         <div className="footer-newsletter">
           <span className="eyebrow">A NOTE FROM US</span>
@@ -66,7 +66,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© 2026 AURELIA. MADE FOR EVERYDAY.</span>
+        <span>© 2026 AURA. MADE FOR EVERYDAY.</span>
         <div>
           <a href="#top">Privacy</a>
           <a href="#top">Terms</a>

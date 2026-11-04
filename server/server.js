@@ -18,11 +18,11 @@ async function start() {
   }
 
   const server = app.listen(config.port, () => {
-    console.log(`Aurelia API listening on port ${config.port}`);
+    console.log(`Aura API listening on port ${config.port}`);
   });
 
   async function shutdown() {
-    console.log('Shutting down Aurelia API...');
+    console.log('Shutting down Aura API...');
     server.close(async (error) => {
       if (error) {
         console.error('Failed to close the API server cleanly:', error);

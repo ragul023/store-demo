@@ -4,14 +4,26 @@ import { apiRequest } from '../services';
 
 const StoreContext = createContext(null);
 const read = (key, fallback) => {
-  try { const value = localStorage.getItem(key); return value ? JSON.parse(value) : fallback; }
+  try {
+    const value = localStorage.getItem(key);
+    if (value) return JSON.parse(value);
+
+    const legacyKey = key.replace(/^aura-/, 'aurelia-');
+    const legacyValue = localStorage.getItem(legacyKey);
+    if (!legacyValue) return fallback;
+
+    const parsed = JSON.parse(legacyValue);
+    localStorage.setItem(key, JSON.stringify(parsed));
+    localStorage.removeItem(legacyKey);
+    return parsed;
+  }
   catch { return fallback; }
 };
 
 export function StoreProvider({ children }) {
-  const [cart, setCart] = useState(() => read('aurelia-cart', []));
-  const [wishlist, setWishlist] = useState(() => read('aurelia-wishlist', []));
-  const [orders, setOrders] = useState(() => read('aurelia-orders', []));
+  const [cart, setCart] = useState(() => read('aura-cart', []));
+  const [wishlist, setWishlist] = useState(() => read('aura-wishlist', []));
+  const [orders, setOrders] = useState(() => read('aura-orders', []));
   const [notice, setNotice] = useState('');
   const [productsList, setProductsList] = useState(products);
 
@@ -23,9 +35,9 @@ export function StoreProvider({ children }) {
     return () => { active = false; };
   }, []);
 
-  useEffect(() => localStorage.setItem('aurelia-cart', JSON.stringify(cart)), [cart]);
-  useEffect(() => localStorage.setItem('aurelia-wishlist', JSON.stringify(wishlist)), [wishlist]);
-  useEffect(() => localStorage.setItem('aurelia-orders', JSON.stringify(orders)), [orders]);
+  useEffect(() => localStorage.setItem('aura-cart', JSON.stringify(cart)), [cart]);
+  useEffect(() => localStorage.setItem('aura-wishlist', JSON.stringify(wishlist)), [wishlist]);
+  useEffect(() => localStorage.setItem('aura-orders', JSON.stringify(orders)), [orders]);
   useEffect(() => {
     if (!notice) return;
     const timer = setTimeout(() => setNotice(''), 2600);

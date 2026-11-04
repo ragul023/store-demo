@@ -19,7 +19,7 @@ jobs:
       NODE_ENV: production
       PORT: 4000
       CLIENT_URL: https://store.example.invalid
-      DATABASE_URL: postgresql://ci:ci@example.invalid:5432/aurelia_store
+      DATABASE_URL: postgresql://ci:ci@example.invalid:5432/aura_store
       DATABASE_SSL: 'true'
       JWT_SECRET: ci-only-placeholder-secret-not-used-for-deployment
       VITE_API_URL: https://api.example.invalid

@@ -1,4 +1,4 @@
-# Aurelia — Fashion Store Demo
+# Aura — Fashion Store Demo
 
 A premium, light-theme fashion storefront for Men, Women and Kids. Built with React + Vite, Express, PostgreSQL and native CSS (one stylesheet per component/page). The storefront includes a polished demo shopping journey and an API/database foundation for the next integration step.
 
@@ -30,7 +30,7 @@ No Tailwind, Bootstrap, Material UI, Chakra UI or styled-components are used.
 
 ## 1. Install dependencies
 
-Run these commands from the project root (`aurelia-store/`):
+Run these commands from the project root:
 
 ```bash
 npm install
@@ -40,10 +40,10 @@ npm install --prefix server
 
 ## 2. Configure PostgreSQL
 
-Create a database named `aurelia_store` using pgAdmin or a terminal:
+Create a database named `aura_store` using pgAdmin or a terminal:
 
 ```sql
-CREATE DATABASE aurelia_store;
+CREATE DATABASE aura_store;
 ```
 
 Copy `server/.env.example` to `server/.env` and update `DATABASE_URL` and `JWT_SECRET`:
@@ -52,7 +52,7 @@ Copy `server/.env.example` to `server/.env` and update `DATABASE_URL` and `JWT_S
 PORT=4000
 NODE_ENV=development
 CLIENT_URL=http://localhost:5173
-DATABASE_URL=postgresql://USER:PASSWORD@localhost:5432/aurelia_store
+DATABASE_URL=postgresql://USER:PASSWORD@localhost:5432/aura_store
 JWT_SECRET=use-a-long-random-secret-at-least-32-characters
 JWT_EXPIRES_IN=7d
 ```
@@ -73,7 +73,7 @@ The frontend starts with its built-in demo catalogue. When the API and database 
 
 ## 4. Start the application
 
-From the project root (`aurelia-store/`):
+From the project root:
 
 ```bash
 npm run dev
@@ -132,7 +132,7 @@ Log in again to receive a JWT containing the updated role.
 ## Project structure
 
 ```text
-aurelia-store/
+project-root/
 ├── client/
 │   └── src/
 │       ├── components/     # Component JSX + matching CSS files
