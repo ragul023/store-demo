@@ -78,12 +78,18 @@ if (isProduction && databaseSslSetting === 'false') {
   throw new Error('DATABASE_SSL cannot be disabled in production.');
 }
 
+const databaseSslRejectUnauthorizedSetting = process.env.DATABASE_SSL_REJECT_UNAUTHORIZED?.toLowerCase();
+if (databaseSslRejectUnauthorizedSetting && !['true', 'false'].includes(databaseSslRejectUnauthorizedSetting)) {
+  throw new Error('DATABASE_SSL_REJECT_UNAUTHORIZED must be set to true or false.');
+}
+
 export const config = Object.freeze({
   isProduction,
   port,
   clientOrigins,
   databaseUrl,
   databaseSsl: isProduction || databaseSslSetting === 'true',
+  databaseSslRejectUnauthorized: databaseSslRejectUnauthorizedSetting !== 'false',
   jwtSecret,
   jwtExpiresIn: process.env.JWT_EXPIRES_IN || '7d',
 });
